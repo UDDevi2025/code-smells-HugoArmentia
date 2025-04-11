@@ -6,10 +6,11 @@ public class WeaponBehaviour : MonoBehaviour
 {
 
     public Transform shootOrigin;
+    public float shootForce = 1000f;
 
     private void Update()
     {
-        Debug.DrawRay(shootOrigin.position, shootOrigin.forward * 1000, Color.red);
+        Debug.DrawRay(shootOrigin.position, shootOrigin.forward * shootForce, Color.red);
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -32,3 +33,6 @@ public class WeaponBehaviour : MonoBehaviour
     }
 
 }
+
+
+// Magic numbers, parametrizacion, literal magico, nombre clase, nombres de variables, optimizacion(en un update se hace algo que no se haria), codigo duplicado

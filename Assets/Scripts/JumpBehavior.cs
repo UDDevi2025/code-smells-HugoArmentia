@@ -6,6 +6,7 @@ public class JB : MonoBehaviour
 {
 
     public Rigidbody playerRigidbody;
+    public float jumpForce = 400f;
 
     private int groundCollisions;
 
@@ -31,7 +32,7 @@ public class JB : MonoBehaviour
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            Vector3 jumpVector = new Vector3(0,1,0) * 400;
+            Vector3 jumpVector = Vector3.up * jumpForce;
             playerRigidbody.AddForce(jumpVector);
         }
     }
